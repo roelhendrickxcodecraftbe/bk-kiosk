@@ -6,10 +6,16 @@ $(document).ready(function(){
       margin:0,
       nav:false,
       dots: false,
+      center: true,
       autoplay:true,
-      autoplayTimeout:1000,
-      autoplayHoverPause:false,
-      slideSpeed: 500,
+      autoplayTimeout:1500,
+      // autoplayHoverPause:false,
+      // slideSpeed: 500,
+      // autoplay: true,
+      // autoplayTimeout: 0,
+      autoplaySpeed: 1500,
+      autoplayHoverPause: false,
+      slideTransition: 'linear',
       responsive : {
         0 : {
           items:3

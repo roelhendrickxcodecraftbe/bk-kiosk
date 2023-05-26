@@ -5,7 +5,7 @@
 .image{
 	&-draw{
 		padding-bottom: 21.5%;	
-		background: transparent url('../images/image-lines.png') repeat center / contain;
+		background: transparent url('../images/image-lines.png') repeat-x center bottom / 100%;
 	}
 
 	&-card{
@@ -70,7 +70,7 @@
 	img{
 		object-fit: cover;
 		object-position: center;
-		height: calc(100vh - 108px);
+		height: calc(100vh - 125px);
 	}
 }
 
@@ -81,11 +81,25 @@
 	}
 
 	&-logos{
+		.owl-item{
+			min-height: 110px;
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+		}
+
 		img{
 			margin: auto;
 			max-width: 90%;
 			max-height: 60px;
 			width: auto !important;
+			@include transition(all 0.5s linear);
+		}
+
+		.center.active{
+			img{
+				@include transform(scale(1.4));
+			}
 		}
 	}
 
@@ -139,15 +153,19 @@
 	}
 }
 
-.carousel-item{
-	img{
-		@include transition(all 8.5s linear);
-		@include transform(scale(1));
-	}
+.carousel{
+	padding: 15px 15px 0;
 
-	&.active{
+	&-item{
 		img{
-			@include transform(scale(1.2));
+			@include transition(all 8.5s linear);
+			@include transform(scale(1));
+		}
+
+		&.active{
+			img{
+				@include transform(scale(1.2));
+			}
 		}
 	}
 }
