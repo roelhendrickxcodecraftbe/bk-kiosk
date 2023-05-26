@@ -1,0 +1,307 @@
+.main{
+	padding-top: $space + 20;
+}
+
+.image{
+	&-draw{
+		padding-bottom: 21.5%;	
+		background: transparent url('../images/image-lines.png') repeat center / contain;
+	}
+
+	&-card{
+		&-bottom{
+			.image-col{
+				height: 768px;
+			}
+
+			&-info{
+				color: Darkgreen(200);
+				padding-bottom: 85px;
+				padding-top: 70px;
+				max-width: 315px;
+				margin: auto;
+				width: 90%;
+
+				p{
+					color: inherit;
+				}
+
+				h2{
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&-col{
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.scan{
+	padding: $space;
+	background: transparent url('../images/Scan-frame.svg') no-repeat center / contain;
+
+	img{
+		max-width: 330px;
+		display: block;
+		margin: auto;
+	}
+}
+
+.circle{
+	&-blue{
+		width: 120px;
+		padding: 5px;
+		height: 120px;
+		color: $white;
+		margin: 0 8px 15px;
+		text-align: center;
+		line-height: 110px;
+		border-radius: 50%;
+		font-size: $f-small;
+		background-color: $blue;
+	}
+}
+
+.slide{
+	img{
+		object-fit: cover;
+		object-position: center;
+		height: calc(100vh - 108px);
+	}
+}
+
+.owl{
+	&-stage{
+		@include flexbox();
+		@include align-items(center);
+	}
+
+	&-logos{
+		img{
+			margin: auto;
+			max-width: 90%;
+			max-height: 60px;
+			width: auto !important;
+		}
+	}
+
+
+	&-carousel{
+		width: 100.3%;
+	}
+
+	&-image{
+		padding-bottom: 62%;
+		position: relative;
+
+		img{
+			object-position: center;
+			position: absolute;
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&-nav{
+		margin-top: 0;
+
+		button{
+			background-color: transparent !important;
+			@include translate(0, -50%);
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+
+			.btn{
+				border-radius: $r-24;
+
+				i{
+					color: $white;
+					font-size: $f-24;
+				}
+			}
+		}
+	}
+
+	&-prev{
+		left: 56px;
+	}
+
+	&-next{
+		right: 56px;
+	}
+}
+
+.carousel-item{
+	img{
+		@include transition(all 8.5s linear);
+		@include transform(scale(1));
+	}
+
+	&.active{
+		img{
+			@include transform(scale(1.2));
+		}
+	}
+}
+
+.ss-logo{
+	@include translate(-50%, -50%);
+	position: absolute;
+	width: 120px;
+	z-index: 5;
+	left: 50%;
+	top: 50%;
+}
+
+.content{
+	h1{
+		margin-bottom: 21px;
+	}
+
+	h5, p{
+		max-width: 98%;
+	}
+
+	h5{
+		font-weight: 600;
+		color: Darkgreen(400);
+		margin-bottom: $space;
+	}
+
+	p{
+		font-weight: 500;
+		line-height: 1.6;
+	}
+}
+
+.card{
+	border: none;
+	max-width: 98%;
+	font-size: $f-h6;
+	padding: 24px 32px;
+	border-radius: $r-16;
+	background: $gray-f9;
+	color: Darkgreen(500);
+
+	div + div{
+		border-top: 1px solid $border;
+		padding-top: 24px;
+		margin-top: 24px;
+	}
+
+	span{
+		width: 80px;
+		height: 80px;
+		@include flexbox();
+		margin-right: 32px;
+		border-radius: $r-16;
+		background-color: $white;
+
+
+		img{
+			margin: auto;
+		}
+	}
+
+	strong{
+		font-weight: 600;
+	}
+}
+
+.project{
+	> img{
+		border-radius: $r-8;
+	}
+
+	&-content{
+		z-index: 2;
+		margin-top: -120px;
+		position: relative;
+		border-radius: $r-8;
+		padding: 40px 48px 32px;
+		background-color: Darkgreen(500); 
+
+		h3{
+			color: $white;
+			margin-bottom: 16px;
+		}
+
+		hr{
+			border-top-color: Darkgreen(400);
+			margin: 40px 0;
+		}
+
+		p{
+			font-weight: 400;
+		}
+
+		p, strong{
+			@extend .text-color-200;
+		}
+
+		strong{
+			top: 1px;
+			line-height: .9;
+			font-weight: 700;
+			position: relative;
+			font-size: $f-base - 4;
+		}
+	}
+}
+
+.sidebar{
+	margin-top: -200px;
+	position: relative;
+	min-width: 215px;
+	width: 215px;
+	z-index: 5;
+
+	&-dark{
+		padding: 48px;
+		border-radius: $r-8;
+		background-color: Darkgreen(500);
+	}
+
+	&-group{
+		border-top: 1px solid Darkgreen(400);
+		margin-top: $f-h4;
+		padding-top: $f-h4;
+
+		img{
+			width: 48px;
+			margin-bottom: $f-24 + 4;
+		}
+
+		h4{
+			font-weight: 600;
+			color: $white;
+			margin-bottom: 10px;
+		}
+
+		p{
+			font-weight: 600;
+			color: Darkgreen(200);
+		}
+	}
+
+	&-yellow{
+		text-align: center;
+		padding: 40px;
+		border-radius: $r-8;
+		color: Darkgreen(500);
+		background-color: Yellowshade(500);
+
+		p{
+			font-weight: 600;
+			color: inherit;
+		}
+	}
+}

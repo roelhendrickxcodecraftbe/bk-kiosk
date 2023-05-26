@@ -1,0 +1,56 @@
+$Darkgreen:(
+	900: #0B0B0B,
+	500: #373535,
+	400: #5F5D5D,
+	300: #878686,
+	200: #AFAEAE,
+	100: #D7D7D7
+);
+
+$yellow:(
+	500: #F2B334,
+	700: #926B20
+);
+
+@function Darkgreen($key) {
+  @return map-get($Darkgreen, $key);
+}
+@function Yellowshade($key) {
+  @return map-get($yellow, $key);
+}
+
+// color
+$border: Darkgreen(100);
+$gray: #f7f7f7;
+$gray-f9: #F9F9F9;
+$white: #fff;
+$black: #000;
+$blue: #115FAB;
+
+// font-family: 'Barlow Condensed', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+// fonts
+$f-family-Barlow: 'Barlow Condensed', sans-serif;
+$f-family-Montserrat: 'Montserrat', sans-serif;
+$f-xl: 72px;
+$f-h1: 72px;
+$f-h2: 40px;
+$f-h3: 32px;
+$f-h4: 32px;
+$f-h5: 24px;
+$f-h6: 24px;
+$f-base: 20px;
+$f-24: 24px;
+$f-small: 16px;
+$f-xs: 12px;
+$f-bold: 700;
+
+// radius
+$r-8: 8px;
+$r-16: 16px;
+$r-24: 24px;
+$r-56: 56px;
+
+// space
+$space: 50px;

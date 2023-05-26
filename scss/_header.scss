@@ -1,0 +1,62 @@
+.header{
+	position: relative;
+
+	> div{
+		min-height: 170px;
+	}
+
+	.logo{
+		@include translate(-50%, -50%);
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+	}
+}
+
+.dark-light{
+	cursor: pointer;
+
+	div{
+		width: 80px;
+		height: 40px;
+		position: relative;
+		border-radius: 25px;
+		background-color: Yellowshade(500);
+	}
+
+	input:checked{
+		+ div{
+			background-color: $white;
+			
+			span{
+				left: 44px;
+				background-color: Yellowshade(500); 
+			}
+
+			img{
+				right: 44px;
+			}
+		}
+	}
+
+	span, img{
+		@include transition(all 0.35s ease-out);
+		position: absolute;
+		margin: auto;
+		bottom: 0;
+		top: 0;
+	}
+
+	span{
+		left: 8px;
+		width: 24px;
+		height: 24px;
+		border-radius: $r-24;
+		background-color: $white;
+	}
+
+	img{
+		right: 12px;
+	}
+}
