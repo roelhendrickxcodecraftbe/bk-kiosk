@@ -1,6 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -84,9 +82,6 @@ p a, ul a {
 }
 
 a, .btn {
-  -moz-transition: all 0.35s linear;
-  -o-transition: all 0.35s linear;
-  -webkit-transition: all 0.35s linear;
   transition: all 0.35s linear;
 }
 
@@ -294,29 +289,12 @@ hr {
 .rounded-56 {
   border-radius: 56px;
 }
-
-@-webkit-keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0px #f2b334, 0 0 0 0px #f2b334;
-  }
-  100% {
-    box-shadow: 0 0 0 var(--shade-lg) rgba(242, 179, 52, 0), 0 0 0 var(--shade-md) rgba(242, 179, 52, 0);
-  }
-}
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0px #f2b334, 0 0 0 0px #f2b334;
   }
   100% {
     box-shadow: 0 0 0 var(--shade-lg) rgba(242, 179, 52, 0), 0 0 0 var(--shade-md) rgba(242, 179, 52, 0);
-  }
-}
-@-webkit-keyframes pulseWhite {
-  0% {
-    box-shadow: 0 0 0 0px white, 0 0 0 0px white;
-  }
-  100% {
-    box-shadow: 0 0 0 var(--shade-lg) rgba(255, 255, 255, 0), 0 0 0 var(--shade-md) rgba(255, 255, 255, 0);
   }
 }
 @keyframes pulseWhite {
@@ -335,23 +313,7 @@ hr {
     transform: translate(5px, 0);
   }
 }
-@-webkit-keyframes arrowMove {
-  0%, 100% {
-    transform: translate(-5px, 0);
-  }
-  50% {
-    transform: translate(5px, 0);
-  }
-}
 @keyframes arrowMoveBack {
-  0%, 100% {
-    transform: translate(5px, 0);
-  }
-  50% {
-    transform: translate(-5px, 0);
-  }
-}
-@-webkit-keyframes arrowMoveBack {
   0%, 100% {
     transform: translate(5px, 0);
   }
@@ -404,9 +366,6 @@ hr {
   min-height: 170px;
 }
 .header .logo {
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 1;
@@ -435,9 +394,6 @@ hr {
   right: 44px;
 }
 .dark-light span, .dark-light img {
-  -moz-transition: all 0.35s ease-out;
-  -o-transition: all 0.35s ease-out;
-  -webkit-transition: all 0.35s ease-out;
   transition: all 0.35s ease-out;
   position: absolute;
   margin: auto;
@@ -482,8 +438,10 @@ hr {
 }
 .image-col {
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .scan {
@@ -510,36 +468,25 @@ hr {
 }
 
 .slide img {
-  object-fit: cover;
-  object-position: center;
-  height: calc(100vh - 125px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: calc(100vh - 235px);
 }
 
 .owl-stage {
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-flexbox !important;
-  display: -webkit-flex !important;
   display: flex !important;
-  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .owl-logos .owl-item {
-  min-height: 110px;
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-flexbox !important;
-  display: -webkit-flex !important;
+  min-height: 200px;
   display: flex !important;
-  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
@@ -550,15 +497,9 @@ hr {
   max-width: 90%;
   max-height: 60px;
   width: auto !important;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 .owl-logos .center.active img {
-  -webkit-transform: scale(1.4);
-  -moz-transform: scale(1.4);
-  -ms-transform: scale(1.4);
   transform: scale(1.4);
 }
 .owl-carousel {
@@ -569,9 +510,11 @@ hr {
   position: relative;
 }
 .owl-image img {
-  object-position: center;
+  -o-object-position: center;
+     object-position: center;
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
   left: 0;
@@ -582,9 +525,6 @@ hr {
 }
 .owl-nav button {
   background-color: transparent !important;
-  -moz-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   position: absolute;
   z-index: 2;
@@ -605,32 +545,20 @@ hr {
 }
 
 .carousel {
-  padding: 15px 15px 0;
+  padding: 25px 25px 0;
 }
 .carousel-item img {
-  -moz-transition: all 8.5s linear;
-  -o-transition: all 8.5s linear;
-  -webkit-transition: all 8.5s linear;
   transition: all 8.5s linear;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
 }
 .carousel-item.active img {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 .ss-logo {
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
-  width: 120px;
+  width: 350px;
   z-index: 5;
   left: 50%;
   top: 50%;
@@ -669,10 +597,6 @@ hr {
 .card span {
   width: 80px;
   height: 80px;
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-flexbox !important;
-  display: -webkit-flex !important;
   display: flex !important;
   margin-right: 32px;
   border-radius: 16px;
@@ -755,6 +679,4 @@ hr {
 .sidebar-yellow p {
   font-weight: 600;
   color: inherit;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

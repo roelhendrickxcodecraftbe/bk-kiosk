@@ -70,7 +70,7 @@
 	img{
 		object-fit: cover;
 		object-position: center;
-		height: calc(100vh - 125px);
+		height: calc(100vh - 235px);
 	}
 }
 
@@ -82,7 +82,7 @@
 
 	&-logos{
 		.owl-item{
-			min-height: 110px;
+			min-height: 200px;
 			@include flexbox();
 			@include align-items(center);
 			@include justify-content(center);
@@ -154,7 +154,7 @@
 }
 
 .carousel{
-	padding: 15px 15px 0;
+	padding: 25px 25px 0;
 
 	&-item{
 		img{
@@ -173,7 +173,7 @@
 .ss-logo{
 	@include translate(-50%, -50%);
 	position: absolute;
-	width: 120px;
+	width: 350px;
 	z-index: 5;
 	left: 50%;
 	top: 50%;

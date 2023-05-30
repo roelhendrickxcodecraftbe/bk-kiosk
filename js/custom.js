@@ -21,10 +21,10 @@ $(document).ready(function(){
           items:3
         },
         960 : {
-          items:4
+          items:3
         },
         1024 : {
-          items:5
+          items:4
         }
       }
     });
